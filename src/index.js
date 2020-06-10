@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+// import { Provider } from 'react-redux';
+// import axios from 'axios';
+// import store from './store/store.js'  //redux需要一个仓库进行存储
+import './style/base.css';
+import Router from './router/index';
 import * as serviceWorker from './serviceWorker';
-
+// React.Component.prototype.$axios = axios;
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router />,
   document.getElementById('root')
 );
 
