@@ -1,0 +1,75 @@
+@mixin container() {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.root {
+  @include container;
+  padding: 5px;
+  background: white;
+  border-radius: 2px;
+  // width: 60px;
+  // height: 60px;
+  width: 100%;
+  height: 100%;
+  label {
+    @include container;
+    display: inline-flex;
+    user-select: none;
+    cursor: pointer;
+  }
+  .heart {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 50%;
+    transition: background-color 200ms ease;
+    &:hover {
+      background-color: rgba(220, 0, 78, 0.08);
+    }
+    &:active {
+      background-color: rgba(220, 0, 78, 0.3);
+      .ripple {
+        transform: scale(0);
+        opacity: 1;
+        transition: 0s;
+      }
+    }
+    .checked {
+      fill: rgb(220, 0, 78);
+      display: none;
+    }
+    .unchecked {
+      fill: grey;
+    }
+  }
+
+  #cbx {
+    display: none;
+    &:checked + label {
+      .checked {
+        display: inline;
+      }
+      .unchecked {
+        display: none;
+      }
+    }
+  }
+  .ripple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgba(220, 0, 78, 0.8);
+    transform: scale(1.2);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

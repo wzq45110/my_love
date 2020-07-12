@@ -1,0 +1,37 @@
+.onlineall {
+  width: 100%;
+}
+.onheafirst {
+  margin: 0 auto;
+  width: 1200px;
+}
+.nav {
+  width: 100%;
+}
+.contentquyu {
+  width: 1200px;
+  height: 1000px;
+  margin: 160px auto;
+}
+.tabul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tabulli {
+  width: 25%;
+  margin: 20px 0;
+}
+.coimg {
+  transition: all 0.6s;
+}
+.coimg:hover {
+  transform: scale(1.4);
+}
+.pagee {
+  margin: 0 auto;
+  text-align: center;
+}

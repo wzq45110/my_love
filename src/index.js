@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import { Provider } from 'react-redux';
-// import axios from 'axios';
+import axios from 'axios';
 // import store from './store/store.js'  //redux需要一个仓库进行存储
 import './style/base.css';
-import Router from './router/index';
+import App from "./pages/App";
 import * as serviceWorker from './serviceWorker';
 // React.Component.prototype.$axios = axios;
+axios.defaults.baseURL = 'http://192.168.0.105:8000/'  //根据项目自己更改(跟组件全局)
+// 引入axios的配置文件 暂时先不用
+// import './server.js'
 ReactDOM.render(
-  <Router />,
+  <App />,
   document.getElementById('root')
 );
 

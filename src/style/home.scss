@@ -1,4 +1,4 @@
-.Home {
+.hom {
   .ant-layout-header {
     position: fixed;
     z-index: 10000;
@@ -7,36 +7,9 @@
     background-color: #fff;
     height: 64px;
     width: 100%;
-    border-bottom: 1px solid #c4c4c4;
-    display: flex;
-    justify-content: space-between;
-    .homleft {
-      //   width: 5%;
-      margin-left: 20px;
-      height: 100%;
-      text-align: center;
-      font-size: 30px;
-      color: #2194ff;
-    }
-    .homcen {
-      color: #e70f89;
-      font-size: 30px;
-    }
-    .homrig {
-      margin-right: 20px;
-      ul {
-        display: flex;
-        justify-content: space-around;
-        li {
-          margin-left: 10px;
-        }
-      }
-    }
   }
   .ant-layout-content {
     padding-top: 64px;
-    //   height: 1000px;
-    // background-color: pink;
     width: 1152px;
     margin: 0 auto;
     .contli {
@@ -86,9 +59,9 @@
   }
   .ant-layout-footer {
     padding: 0;
+    width: 1152px;
+    margin: 0 auto;
+    height: 280px;
+    background-color: pink;
   }
-}
-
-.Home :global(.ant-tle) {   
-  color: #fff;
 }
